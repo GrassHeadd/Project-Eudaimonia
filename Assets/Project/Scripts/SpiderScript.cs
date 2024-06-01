@@ -77,7 +77,7 @@ public class SpiderScript : MonoBehaviour
         //gets the distance between them
         float distanceBetwSpiderNPlayer = Vector3.Distance(spiderPos, playerPos);
         Debug.Log("Distance: " + distanceBetwSpiderNPlayer);
-        //keep recalculating the next position if near the player
+        //keep recalculating the next position if near the player and move to that point
         if (distanceBetwSpiderNPlayer < 0.5)
         {
             StartCoroutine(GoRandomPlace(minCoord, maxCoord, 2));
