@@ -164,6 +164,27 @@ MonoBehaviour:
   features: []
   m_renderMode: 1
   m_depthSubmissionMode: 0
+--- !u!114 &-7722749880113780935
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 55a4959af032305438a04d410c6b0418, type: 3}
+  m_Name: InterceptCreateSessionFeature Android
+  m_EditorClassIdentifier: 
+  m_enabled: 0
+  nameUi: 'Sample: Intercept Create Session'
+  version: 0.0.1
+  featureIdInternal: com.unity.openxr.feature.example.intercept
+  openxrExtensionStrings: XR_test
+  company: Unity
+  priority: 0
+  required: 0
+  message: Hello from C#!
 --- !u!114 &-7608755179541951601
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -285,6 +306,26 @@ MonoBehaviour:
   - {fileID: -5611916350011621528}
   m_renderMode: 1
   m_depthSubmissionMode: 0
+--- !u!114 &-6536897798240678655
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b2fe570546b5b2046873e03d7b882369, type: 3}
+  m_Name: MeshingTeapotFeature Standalone
+  m_EditorClassIdentifier: 
+  m_enabled: 1
+  nameUi: 'Sample: Meshing Teapot'
+  version: 0.0.1
+  featureIdInternal: com.unity.openxr.feature.example.meshing
+  openxrExtensionStrings: 
+  company: Unity
+  priority: 0
+  required: 0
 --- !u!114 &-6368128839055358620
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -450,6 +491,27 @@ MonoBehaviour:
   priority: 0
   required: 0
   ignoreValidationErrors: 0
+--- !u!114 &-4847931946671602113
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 55a4959af032305438a04d410c6b0418, type: 3}
+  m_Name: InterceptCreateSessionFeature Metro
+  m_EditorClassIdentifier: 
+  m_enabled: 0
+  nameUi: 'Sample: Intercept Create Session'
+  version: 0.0.1
+  featureIdInternal: com.unity.openxr.feature.example.intercept
+  openxrExtensionStrings: XR_test
+  company: Unity
+  priority: 0
+  required: 0
+  message: Hello from C#!
 --- !u!114 &-4731438336562001402
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -551,6 +613,26 @@ MonoBehaviour:
   company: Unity
   priority: 0
   required: 0
+--- !u!114 &-3840045968405198225
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b2fe570546b5b2046873e03d7b882369, type: 3}
+  m_Name: MeshingTeapotFeature Metro
+  m_EditorClassIdentifier: 
+  m_enabled: 0
+  nameUi: 'Sample: Meshing Teapot'
+  version: 0.0.1
+  featureIdInternal: com.unity.openxr.feature.example.meshing
+  openxrExtensionStrings: 
+  company: Unity
+  priority: 0
+  required: 0
 --- !u!114 &-3551639914286601086
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -591,7 +673,9 @@ MonoBehaviour:
   - {fileID: 6504682016904032715}
   - {fileID: 5007098057516315081}
   - {fileID: 1727173055597128861}
+  - {fileID: 4014681125971126543}
   - {fileID: -8732650259347650135}
+  - {fileID: -6536897798240678655}
   - {fileID: 4025793028449617705}
   - {fileID: -381482547018402083}
   - {fileID: 5447152813868908602}
@@ -794,7 +878,9 @@ MonoBehaviour:
   - {fileID: 3554264124859437666}
   - {fileID: 8968387473496227895}
   - {fileID: -7492839480718335507}
+  - {fileID: -7722749880113780935}
   - {fileID: 9020184986697725232}
+  - {fileID: 7023682658520721269}
   - {fileID: 7497383018830012468}
   - {fileID: 7223869130901287869}
   - {fileID: -3884623058556172510}
@@ -1301,6 +1387,27 @@ MonoBehaviour:
   required: 0
   cacheSize: 1048576
   perThreadCacheSize: 51200
+--- !u!114 &4014681125971126543
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 55a4959af032305438a04d410c6b0418, type: 3}
+  m_Name: InterceptCreateSessionFeature Standalone
+  m_EditorClassIdentifier: 
+  m_enabled: 1
+  nameUi: 'Sample: Intercept Create Session'
+  version: 0.0.1
+  featureIdInternal: com.unity.openxr.feature.example.intercept
+  openxrExtensionStrings: XR_test
+  company: Unity
+  priority: 0
+  required: 0
+  message: Hello from C#!
 --- !u!114 &4025793028449617705
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1384,7 +1491,9 @@ MonoBehaviour:
   - {fileID: 4612659052090229092}
   - {fileID: 8905368366970065329}
   - {fileID: -32235343128412357}
+  - {fileID: -4847931946671602113}
   - {fileID: -8128878415866299878}
+  - {fileID: -3840045968405198225}
   - {fileID: 2507977727062586280}
   - {fileID: 212745919841223148}
   - {fileID: 6549459535310700055}
@@ -1653,6 +1762,26 @@ MonoBehaviour:
   nameUi: Microsoft Motion Controller Profile
   version: 0.0.1
   featureIdInternal: com.unity.openxr.feature.input.microsoftmotioncontroller
+  openxrExtensionStrings: 
+  company: Unity
+  priority: 0
+  required: 0
+--- !u!114 &7023682658520721269
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b2fe570546b5b2046873e03d7b882369, type: 3}
+  m_Name: MeshingTeapotFeature Android
+  m_EditorClassIdentifier: 
+  m_enabled: 0
+  nameUi: 'Sample: Meshing Teapot'
+  version: 0.0.1
+  featureIdInternal: com.unity.openxr.feature.example.meshing
   openxrExtensionStrings: 
   company: Unity
   priority: 0
