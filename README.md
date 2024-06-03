@@ -6,7 +6,7 @@ Proposed Level of Achievement: Apollo 11
 Create a simulation of scenarios where users can interact with their biophobias at psuedo reality level to act as a branch to aid them in overcoming their biophobias eventually  
 
 ## OVERVIEW
-Welcome to the Spider Interaction Unity Project! This project creates an immersive environment where players can interact with a spider in various ways within a detailed living room setting that opens to a forest outside. This README provides an overview of the features, setup instructions, and other essential information.
+Welcome to the Project Eudaemonia! This project creates an immersive environment where players can interact with a spider in various ways within a detailed living room setting that opens to a forest outside. This README provides an overview of the features, setup instructions, and other essential information.
 
 ## FEATURES
 ### Spider:
