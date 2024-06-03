@@ -68,7 +68,7 @@ public class SpiderScript : MonoBehaviour
         escapeObj.transform.position = newRandomPos;
 
         //set the animation move speed
-        animator.SetInteger("MoveSpeed", speed);
+        animator.SetBool("isRunning", true);
 
         //waiting for calculations of the new coordinates so it starts walking
         yield return new WaitForSeconds(2f);
@@ -82,8 +82,7 @@ public class SpiderScript : MonoBehaviour
 
         //Debug.Log("Stopped " + agent.remainingDistance);
         // Spider Reached! Set to Idle and wait random seconds then do another random movement
-        animator.SetInteger("MoveSpeed", 0);
-
+        animator.SetBool("isRunning", false);
         float randomWaitTime = UnityEngine.Random.Range(minWaitTime, maxWaitTime);
         //Debug.Log("Reached! Now waiting for " + randomWaitTime + " before selecting another destination");
         yield return new WaitForSeconds(randomWaitTime);
@@ -113,6 +112,9 @@ public class SpiderScript : MonoBehaviour
         escapeObj.transform.position = finalPosition;
         //set the destination
         agent.SetDestination(finalPosition);
+        
+        //set the animation move speed
+        animator.SetBool("isRunning", true);
 
         // See if spider has reached the escape destination
         yield return new WaitForSeconds(2f);
