@@ -37,6 +37,16 @@ public class SpiderScript : MonoBehaviour
         walkTask = StartCoroutine(GoRandomPlace(minCoord, maxCoord, 1));
     }
 
+    void FixedUpdate()
+    {
+        // Constantly check 50 times a second to see if player is nearby. if it is, trigger an escape task.
+        if (!isGrabbed && Vector3.Distance(player.transform.position, transform.position) < scareDistance) {
+            // Debug.Log("Player is near");
+            if (escapeTask == null) escapeTask = StartCoroutine(RunFromPlayerTask());
+        }
+    }
+
+
     /// <summary>
     /// makes the spider roam around,
     /// takes in upper and lower coordinates for you to limit the range of spider and speed of animation settings(0,1,2)
@@ -71,7 +81,6 @@ public class SpiderScript : MonoBehaviour
         }
 
         //Debug.Log("Stopped " + agent.remainingDistance);
-
         // Spider Reached! Set to Idle and wait random seconds then do another random movement
         animator.SetInteger("MoveSpeed", 0);
 
@@ -83,14 +92,7 @@ public class SpiderScript : MonoBehaviour
         walkTask = StartCoroutine(GoRandomPlace(lower, upper, speed));
     }
 
-    void FixedUpdate()
-    {
-        // Constantly check 50 times a second to see if player is nearby. if it is, trigger an escape task.
-        if (!isGrabbed && Vector3.Distance(player.transform.position, transform.position) < scareDistance) {
-            // Debug.Log("Player is near");
-            if (escapeTask == null) escapeTask = StartCoroutine(RunFromPlayerTask());
-        }
-    }
+
 
     //javadoc later cus im lazy lmao
     public IEnumerator RunFromPlayerTask()
