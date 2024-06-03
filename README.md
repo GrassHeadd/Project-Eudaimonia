@@ -1,4 +1,3 @@
-README.md
 # Project Eudaemonia
 By: Yin Zi and Junjie  
 Proposed Level of Achievement: Apollo 11  
