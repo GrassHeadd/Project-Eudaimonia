@@ -3,7 +3,7 @@ README.md
 By: Yin Zi and Junjie  
 Proposed Level of Achievement: Apollo 11  
   
-##Project Scope
+## Project Scope
 Create a simulation of scenarios where users can interact with their biophobias at psuedo reality level to act as a branch to aid them in overcoming their biophobias eventually  
 
 ## OVERVIEW
