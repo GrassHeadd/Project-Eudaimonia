@@ -11,7 +11,7 @@ public class SpiderScript : MonoBehaviour
     private Animator animator;
 
     //player to indicate the player
-    [SerializeField] private GameObject player;
+    [SerializeField] private GameObject player; /*SerializeField makes it show up on unity under the inspector so we can edit it directly there*/
     //scare objects for logic for spider to run away when you get close to it
     [SerializeField] private GameObject escapeObj;
     [SerializeField] private float scareDistance = 1.5f;
@@ -19,7 +19,7 @@ public class SpiderScript : MonoBehaviour
     [SerializeField] private bool isGrabbed = false, isPlayerNear = false;
 
     //coordinates and time for spider travelling
-    [SerializeField]  private float minCoord = -4.5f; /*serializeField makes it show up on unity under the inspector so we can edit it directly there*/
+    [SerializeField]  private float minCoord = -4.5f; 
     [SerializeField] private float maxCoord = 4.5f;
     [SerializeField] private float minWaitTime = 3f;
     [SerializeField] private float maxWaitTime = 7f;
