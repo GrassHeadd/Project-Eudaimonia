@@ -35,6 +35,7 @@ Welcome to the Spider Interaction Unity Project! This project creates an immersi
 ### Requirements:
   Unity Version: This project is developed with Unity version 2022.3.8f1. Ensure you have this version or a later version installed  
   Dependencies: No additional dependencies are required for this project
+  Target Device: Meta Oculus Device (Quest or Rift)
 
 # Contact:
 For any issues please contact e1122283@u.nus.edu  
