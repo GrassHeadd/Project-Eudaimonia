@@ -92,7 +92,7 @@ public class SpiderScript : MonoBehaviour
         }
     }
 
-    //javadoc tbc cus im lazy lmao
+    //javadoc later cus im lazy lmao
     public IEnumerator RunFromPlayerTask()
     {
         // Debug.Log("Running!");
@@ -133,7 +133,7 @@ public class SpiderScript : MonoBehaviour
         }
     }
 
-    //javac doc tbc but just stopping the task
+    //javac doc to-do but just stopping the task
     public void StopPathing()
     {
         StopCoroutine(walkTask);
@@ -141,10 +141,14 @@ public class SpiderScript : MonoBehaviour
         isGrabbed = true;
     }
 
-    //javac doc tbc but just restarting the task
+    //javac doc to-do but just restarting the task
     public void StartPathingAgain()
     {
         isGrabbed = false;
+        //drop it to y=0;
+        transform.position.Set(transform.position.x, 0, transform.position.z);
+        agent.isStopped = true;
+        agent.ResetPath();
         walkTask = StartCoroutine(GoRandomPlace(minCoord, maxCoord, 1));
         
     }
