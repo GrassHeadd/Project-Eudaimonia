@@ -36,6 +36,6 @@ Welcome to the Spider Interaction Unity Project! This project creates an immersi
   Dependencies: No additional dependencies are required for this project
 
 # Contact:
-For any issues please contact e1122293@u.nus.edu  
+For any issues please contact e1122283@u.nus.edu  
   
 Thank you for checking out Project Eudaemonia! Enjoy our prototype and have fun with it:D  
