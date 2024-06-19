@@ -34,9 +34,9 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _AlphaLeak: 0.6
+    - _AlphaLeak: 0.708
     - _AmbientTranslucency: 0.5
-    - _Cutoff: 0.45
+    - _Cutoff: 0.345
     - _EnableTransFade: 0
     - _NormalScale: 1
     - _OcclusionStrength: 1
@@ -47,6 +47,6 @@ Material:
     - _ViewDependency: 0.3
     - _WindStrength: 0.76
     m_Colors:
-    - _HueVariation: {r: 0, g: 0.9, b: 0.8255172, a: 0.1}
-    - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
+    - _HueVariation: {r: 0.21960786, g: 0.21960786, b: 0.21960786, a: 0.1}
+    - _SpecColor: {r: 0, g: 0.33962262, b: 0.06958577, a: 1}
   m_BuildTextureStacks: []
