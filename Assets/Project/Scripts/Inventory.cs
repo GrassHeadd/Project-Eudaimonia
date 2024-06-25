@@ -1,38 +1,29 @@
-// Script name: InventoryVR
-// Script purpose: attaching a gameobject to a certain anchor and having the ability to enable and disable it.
-// This script is a property of Realary, Inc
-
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
-using UnityEngine.XR;
+using UnityEngine.XR.Interaction.Toolkit;
+using UnityEngine.InputSystem;
 
-
-public class InventoryVR : MonoBehaviour
+public class InventoryScript : MonoBehaviour
 {
-    public GameObject Inventory;
-    public GameObject Anchor;
-    bool UIActive;
+    private InputActionReference secondaryActionButton;
+    [SerializeField] private ActionBasedController leftController;
+    [SerializeField] private InputHelpers.Button buttonToTestFor;
+    [SerializeField] private GameObject prefab;
 
-
-    private void Start() {
-        Inventory.SetActive(false);
-        UIActive = false;
+    private void Start()
+    {
     }
 
-    private void Update() {
-        InputDevices.GetDeviceAtXRNode(XRNode.LeftHand).TryGetFeatureValue(CommonUsages.primaryButton, out var down);
+    private void Update()
+    {
+        // Debug.Log(leftController.activateAction.action.ReadValue<float>());
+        // (buttonToTestFor, out bool pressed);
+        if (leftController.activateAction.action.ReadValue<float>() > 0.5f) prefab.SetActive(!prefab.activeSelf);
+    }
+    
 
-        if (down) {
-            Debug.Log("down check up");
-            UIActive = !UIActive;
-            Inventory.SetActive(UIActive);
-            Debug.Log("active work");
-        }
-        if (UIActive) {
-            Inventory.transform.position = Anchor.transform.position;
-            Inventory.transform.eulerAngles = new Vector3(Anchor.transform.eulerAngles.x + 15, Anchor.transform.eulerAngles.y, 0);
-        }
+
+    public void Foo()
+    {
+        Instantiate(prefab, new Vector3(-2.5f, 1.5f, 0), Quaternion.identity);
     }
 }

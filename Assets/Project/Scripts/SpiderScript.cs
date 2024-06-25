@@ -4,8 +4,7 @@ using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.InputSystem;
 
-public class SpiderScript : MonoBehaviour
-{
+public class SpiderScript : MonoBehaviour {
     // Setting up stuff, agent to tell the AI what to do, animator to bind the animator to the spider
     private NavMeshAgent agent;
     private Animator animator;
@@ -69,6 +68,7 @@ public class SpiderScript : MonoBehaviour
 
         //set the animation move speed
         animator.SetBool("isRunning", true);
+        animator.speed = 2.0f;
 
         //waiting for calculations of the new coordinates so it starts walking
         yield return new WaitForSeconds(2f);
@@ -94,8 +94,7 @@ public class SpiderScript : MonoBehaviour
 
 
     //javadoc later cus im lazy lmao
-    public IEnumerator RunFromPlayerTask()
-    {
+    public IEnumerator RunFromPlayerTask() {
         // Debug.Log("Running!");
         //stop the current task of the spider aka walking
         StopCoroutine(walkTask);
@@ -138,16 +137,14 @@ public class SpiderScript : MonoBehaviour
     }
 
     //javac doc to-do but just stopping the task
-    public void StopPathing()
-    {
+    public void StopPathing() {
         StopCoroutine(walkTask);
         agent.isStopped = true;
         isGrabbed = true;
     }
 
     //javac doc to-do but just restarting the task
-    public void StartPathingAgain()
-    {
+    public void StartPathingAgain() {
         isGrabbed = false;
         //drop it to y=0;
         transform.position.Set(transform.position.x, 0, transform.position.z);

@@ -5,10 +5,10 @@ using UnityEngine.AI;
 
 public class EnemySpawner : MonoBehaviour
 {
-    private GameObject theEnemy;
-    private int xPos;
-    private int zPos;
-    private int EnemyCount;
+    [SerializeField] private GameObject theEnemy;
+    [SerializeField] private int xPos;
+    [SerializeField] private int zPos;
+    [SerializeField] private int EnemyCount;
 
     [SerializeField] private int maxEnemy = 20;
 
