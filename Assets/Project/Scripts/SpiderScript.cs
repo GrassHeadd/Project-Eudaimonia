@@ -43,6 +43,7 @@ public class SpiderScript : MonoBehaviour {
             // Debug.Log("Player is near");
             if (escapeTask == null) escapeTask = StartCoroutine(RunFromPlayerTask());
         }
+        delete();
     }
 
 
@@ -152,6 +153,12 @@ public class SpiderScript : MonoBehaviour {
         agent.ResetPath();
         walkTask = StartCoroutine(GoRandomPlace(minCoord, maxCoord, 1));
         
+    }
+
+    public void delete() {
+        if(gameObject.transform.position.y < 0) {
+            gameObject.SetActive(false);
+        }
     }
 
 }
