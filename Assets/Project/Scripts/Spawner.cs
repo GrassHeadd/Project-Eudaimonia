@@ -13,7 +13,8 @@ public class Spawner : MonoBehaviour
     [SerializeField] private int zMin = -10;
     [SerializeField] private int timeBetwEnemySpawn = 1;
     [SerializeField] private int maxEnemy = 10;
-    private int EnemyCount;
+    [SerializeField] private EnemyDisplayUI enemyDisplayUI;
+    public int EnemyCount;
     public Vector3 pos;
 
     private void Start() {
@@ -33,7 +34,8 @@ public class Spawner : MonoBehaviour
 
             Instantiate(theEnemy, pos, Quaternion.identity);
             yield return new WaitForSeconds(timeBetwEnemySpawn);
-            EnemyCount += 1;
+            EnemyCount++;
+            enemyDisplayUI.updateCountText(this.EnemyCount);
         }
     }
 }

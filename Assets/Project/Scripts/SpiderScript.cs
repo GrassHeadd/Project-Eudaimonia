@@ -1,8 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 public class SpiderScript : MonoBehaviour {
     // Setting up stuff, agent to tell the AI what to do, animator to bind the animator to the spider
@@ -22,6 +24,8 @@ public class SpiderScript : MonoBehaviour {
     [SerializeField] private float maxCoord = 4.5f;
     [SerializeField] private float minWaitTime = 3f;
     [SerializeField] private float maxWaitTime = 7f;
+
+    [SerializeField] private EnemyDisplayUI enemyDisplayUI;
 
     //a runnable (cs2030s wow), to change if spider is running away from you or just roaming
     private Coroutine walkTask = null, escapeTask;
@@ -43,7 +47,7 @@ public class SpiderScript : MonoBehaviour {
             // Debug.Log("Player is near");
             if (escapeTask == null) escapeTask = StartCoroutine(RunFromPlayerTask());
         }
-        delete();
+        Delete();
     }
 
 
@@ -155,12 +159,29 @@ public class SpiderScript : MonoBehaviour {
         
     }
 
-    public void delete() {
+    //disables the spider after getting thrown out of the house
+    public void Delete() {
+       // Debug.Log(gameObject.transform.position);
+
         if(gameObject.transform.position.y < 0) {
+            //Debug.Log("this gets called");
+            spidersLeft();
             gameObject.SetActive(false);
         }
     }
 
+    public void spidersLeft() {
+        GameObject spiderSpawner = GameObject.FindGameObjectWithTag("Spawner");
+        //Debug.Log("Object found: " + spiderSpawner);
+        Spawner spawner = spiderSpawner.GetComponent<Spawner>();
+
+        spawner.EnemyCount--;
+        enemyDisplayUI.updateCountText(spawner.EnemyCount);
+
+        if(spawner.EnemyCount <= 0) {
+            enemyDisplayUI.endGame();
+        }
+    }
 }
 
 

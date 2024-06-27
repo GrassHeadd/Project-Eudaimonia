@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - GrassLand
+  - Spawner
   layers:
   - Default
   - TransparentFX
