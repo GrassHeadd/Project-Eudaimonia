@@ -6,6 +6,9 @@ TagManager:
   tags:
   - GrassLand
   - Spawner
+  - StaticGameObject
+  - Anchor
+  - Body
   layers:
   - Default
   - TransparentFX

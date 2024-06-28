@@ -1,9 +1,7 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
-using UnityEditor.SearchService;
 using UnityEngine.SceneManagement;
 
 public class EnemyDisplayUI : MonoBehaviour
@@ -11,7 +9,6 @@ public class EnemyDisplayUI : MonoBehaviour
     // Start is called before the first frame update
     [SerializeField] private Image Background;
     [SerializeField] private TMP_Text countText;
-
     [SerializeField] private int speedOfTransition = 10;
 
     public void updateCountText(int count) {

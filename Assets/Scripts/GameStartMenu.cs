@@ -18,6 +18,8 @@ public class GameStartMenu : MonoBehaviour
 
     public List<Button> returnButtons;
 
+    [SerializeField] public SceneTransitionManager sceneTransitionManager;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -33,6 +35,7 @@ public class GameStartMenu : MonoBehaviour
         {
             item.onClick.AddListener(EnableMainMenu);
         }
+
     }
 
     public void QuitGame()

@@ -1,10 +1,6 @@
 using System.Collections;
-using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.AI;
-using UnityEngine.InputSystem;
-using UnityEngine.SceneManagement;
 
 public class SpiderScript : MonoBehaviour {
     // Setting up stuff, agent to tell the AI what to do, animator to bind the animator to the spider
@@ -173,7 +169,7 @@ public class SpiderScript : MonoBehaviour {
     public void spidersLeft() {
         GameObject spiderSpawner = GameObject.FindGameObjectWithTag("Spawner");
         //Debug.Log("Object found: " + spiderSpawner);
-        Spawner spawner = spiderSpawner.GetComponent<Spawner>();
+        SpiderSpawner spawner = spiderSpawner.GetComponent<SpiderSpawner>();
 
         spawner.EnemyCount--;
         enemyDisplayUI.updateCountText(spawner.EnemyCount);

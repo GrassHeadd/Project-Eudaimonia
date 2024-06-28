@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.SceneManagement;
 
 public class SnakeScript : MonoBehaviour
 {
@@ -18,21 +19,24 @@ public class SnakeScript : MonoBehaviour
     [SerializeField] private float minWaitTime = 3f;
     [SerializeField] private float maxWaitTime = 7f;
     private Coroutine walkTask = null, escapeTask;
+    
+    
 
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
         animator = GetComponent<Animator>();
         walkTask = StartCoroutine(GoRandomPlace(minCoord, maxCoord, 1));
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (!isGrabbed && Vector3.Distance(player.transform.position, transform.position) < scareDistance) {
-            // Debug.Log("Player is near");
-            if (escapeTask == null) escapeTask = StartCoroutine(RunFromPlayerTask());
-        }
+        // if (!isGrabbed && Vector3.Distance(player.transform.position, transform.position) < scareDistance) {
+        //     // Debug.Log("Player is near");
+        //     if (escapeTask == null) escapeTask = StartCoroutine(RunFromPlayerTask());
+        // }
     }
 
     public IEnumerator GoRandomPlace(float lower, float upper, int speed) {
@@ -72,37 +76,37 @@ public class SnakeScript : MonoBehaviour
 
 
 
-    public IEnumerator RunFromPlayerTask() {
-        // Debug.Log("Running!");
-        StopCoroutine(walkTask);
-        float escapeRange = Random.Range(5, 10);
-        Vector3 randomPointInSphere = Random.insideUnitSphere * escapeRange;
-        randomPointInSphere += transform.position;
-        NavMeshHit hit;
-        NavMesh.SamplePosition(randomPointInSphere, out hit, escapeRange, 1);
-        Vector3 finalPosition = hit.position;
-        escapeObj.transform.position = finalPosition;
+    // public IEnumerator RunFromPlayerTask() {
+    //     // Debug.Log("Running!");
+    //     StopCoroutine(walkTask);
+    //     float escapeRange = Random.Range(5, 10);
+    //     Vector3 randomPointInSphere = Random.insideUnitSphere * escapeRange;
+    //     randomPointInSphere += transform.position;
+    //     NavMeshHit hit;
+    //     NavMesh.SamplePosition(randomPointInSphere, out hit, escapeRange, 1);
+    //     Vector3 finalPosition = hit.position;
+    //     escapeObj.transform.position = finalPosition;
 
-        agent.SetDestination(finalPosition);
-        animator.SetBool("isRunning", true);
+    //     agent.SetDestination(finalPosition);
+    //     animator.SetBool("isRunning", true);
 
-        yield return new WaitForSeconds(2f);
-        while (agent.remainingDistance > 0.1f) yield return new WaitForFixedUpdate();
+    //     yield return new WaitForSeconds(2f);
+    //     while (agent.remainingDistance > 0.1f) yield return new WaitForFixedUpdate();
 
-        // Spider reached! Is player still near it? (i.e. still chasing it the whole while)
-        if (isPlayerNear)
-        {
-            escapeTask = StartCoroutine(RunFromPlayerTask());
-            // Debug.Log("Escape failed, trying to run again...");
-        }
-        // Player no longer chasing it! Resume normal walking tasks
-        else
-        {
-            // Debug.Log("Escape success!");
-            escapeTask = null;
-            walkTask = StartCoroutine(GoRandomPlace(minCoord, maxCoord, 1));
-        }
-    }
+    //     // Spider reached! Is player still near it? (i.e. still chasing it the whole while)
+    //     if (isPlayerNear)
+    //     {
+    //         escapeTask = StartCoroutine(RunFromPlayerTask());
+    //         // Debug.Log("Escape failed, trying to run again...");
+    //     }
+    //     // Player no longer chasing it! Resume normal walking tasks
+    //     else
+    //     {
+    //         // Debug.Log("Escape success!");
+    //         escapeTask = null;
+    //         walkTask = StartCoroutine(GoRandomPlace(minCoord, maxCoord, 1));
+    //     }
+    // }
 
     public void StopPathing() {
         StopCoroutine(walkTask);
@@ -119,5 +123,17 @@ public class SnakeScript : MonoBehaviour
         agent.ResetPath();
         walkTask = StartCoroutine(GoRandomPlace(minCoord, maxCoord, 1));
         
+    }
+
+    public void OnTriggerEnter(Collider other) {
+        
+        if(other.tag == "Body") {
+            playerDie();
+        }
+    }
+
+    public void playerDie() {
+        GameObject.FindGameObjectWithTag("StaticGameObject").GetComponent<StaticSceneData>().LastDeathSceneIndex = SceneManager.GetActiveScene().buildIndex;
+        SceneManager.LoadSceneAsync("DeathScene");
     }
 }
