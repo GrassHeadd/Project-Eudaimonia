@@ -5,9 +5,16 @@ using UnityEngine;
 public class StaticSceneData : MonoBehaviour
 {
     public int LastDeathSceneIndex = -1;
-    // Start is called before the first frame update
+    private static StaticSceneData instance;
  
     void Awake() {
-        DontDestroyOnLoad(gameObject);
+        if(instance == null) {
+            instance = this;
+            DontDestroyOnLoad(gameObject);
+        } else {
+            Debug.Log("destroyed game object singleton");
+            Destroy(gameObject);
+        }
+        
     }
 }

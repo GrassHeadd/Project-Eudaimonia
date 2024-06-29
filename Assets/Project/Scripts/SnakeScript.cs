@@ -15,7 +15,7 @@ public class SnakeScript : MonoBehaviour
     [SerializeField] private bool isGrabbed = false, isPlayerNear = false;
     //------------------Coords---------------------
     [SerializeField]  private float minCoord = 0f; 
-    [SerializeField] private float maxCoord = 100f;
+    [SerializeField] private float maxCoord = 200f;
     [SerializeField] private float minWaitTime = 3f;
     [SerializeField] private float maxWaitTime = 7f;
     private Coroutine walkTask = null, escapeTask;
@@ -42,7 +42,7 @@ public class SnakeScript : MonoBehaviour
     public IEnumerator GoRandomPlace(float lower, float upper, int speed) {
         Debug.Log("Walking normally === ");
         //generate a random max and min coordinate
-        float x = UnityEngine.Random.Range(lower, upper), z = UnityEngine.Random.Range(lower, upper);
+        float x = UnityEngine.Random.Range(lower, upper/2), z = UnityEngine.Random.Range(lower, upper);
 
         Debug.Log("Now pathed to " + x + " and " + z);
 
@@ -126,7 +126,6 @@ public class SnakeScript : MonoBehaviour
     }
 
     public void OnTriggerEnter(Collider other) {
-        
         if(other.tag == "Body") {
             playerDie();
         }

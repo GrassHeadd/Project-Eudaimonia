@@ -15,6 +15,10 @@ public class EnemyDisplayUI : MonoBehaviour
         countText.text = "Enemies Left: " + count;
     }
 
+    public void updateTimeText(float time) {
+        countText.text = "Time Left: " + time;
+    }
+
     public IEnumerator endGameTask() {
         while(Background.color.a < 1) {
             Background.color = new Color(Background.color.r, Background.color.g, Background.color.b, Background.color.a + speedOfTransition/255f);

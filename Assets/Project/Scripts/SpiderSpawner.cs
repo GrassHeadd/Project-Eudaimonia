@@ -9,9 +9,11 @@ public class SpiderSpawner : MonoBehaviour
     [SerializeField] private int xMin = -5;
     [SerializeField] private int zMax = 5;
     [SerializeField] private int zMin = -10;
-    [SerializeField] private int timeBetwEnemySpawn = 1;
+    [SerializeField] private float timeBetwEnemySpawn = 1f;
     [SerializeField] private int maxEnemy = 10;
     [SerializeField] private EnemyDisplayUI enemyDisplayUI;
+
+    [SerializeField] private bool shouldUpdateUI = true;
     public int EnemyCount;
     public Vector3 pos;
 
@@ -33,7 +35,10 @@ public class SpiderSpawner : MonoBehaviour
             Instantiate(theEnemy, pos, Quaternion.identity);
             yield return new WaitForSeconds(timeBetwEnemySpawn);
             EnemyCount++;
-            enemyDisplayUI.updateCountText(this.EnemyCount);
+            if(shouldUpdateUI) {
+                enemyDisplayUI.updateCountText(this.EnemyCount);
+            }
+            
         }
     }
 }
