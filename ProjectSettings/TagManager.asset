@@ -9,6 +9,8 @@ TagManager:
   - StaticGameObject
   - Anchor
   - Body
+  - Spider
+  - SpiderDie
   layers:
   - Default
   - TransparentFX

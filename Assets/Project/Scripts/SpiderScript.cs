@@ -20,8 +20,8 @@ public class SpiderScript : MonoBehaviour {
     [SerializeField] private float maxCoord = 4.5f;
     [SerializeField] private float minWaitTime = 3f;
     [SerializeField] private float maxWaitTime = 7f;
-
     [SerializeField] private EnemyDisplayUI enemyDisplayUI;
+
 
     //a runnable (cs2030s wow), to change if spider is running away from you or just roaming
     private Coroutine walkTask = null, escapeTask;
@@ -43,7 +43,6 @@ public class SpiderScript : MonoBehaviour {
             // Debug.Log("Player is near");
             if (escapeTask == null) escapeTask = StartCoroutine(RunFromPlayerTask());
         }
-        Delete();
     }
 
 
@@ -156,15 +155,17 @@ public class SpiderScript : MonoBehaviour {
     }
 
     //disables the spider after getting thrown out of the house
-    public void Delete() {
-       // Debug.Log(gameObject.transform.position);
+    // public void Delete() {
+    //    // Debug.Log(gameObject.transform.position);
 
-        if(gameObject.transform.position.y < 0) {
-            //Debug.Log("this gets called");
-            spidersLeft();
-            gameObject.SetActive(false);
-        }
-    }
+    //     if(gameObject.transform.position.y < 0) {
+    //         //Debug.Log("this gets called");
+    //         spidersLeft();
+    //         gameObject.SetActive(false);
+    //     }
+    // }
+
+
 
     public void spidersLeft() {
         GameObject spiderSpawner = GameObject.FindGameObjectWithTag("Spawner");
