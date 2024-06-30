@@ -17,18 +17,18 @@ Welcome to the Project Eudaemonia! This project creates an immersive environment
     2. Open in Unity  
        - Launch Unity Hub  
        - Click on the "add" button  
-       - Select the cloned repository folder to open the project in Unity
-       - Might need to enable the XR Device Simulator Asset on the Hierarchy(left side of screen)
-         - right click and select toggle active status, name should light up
-         - repeat the steps for all scenes by going to Projects on the bottom
-         - select Projects folder, followed by scenes and repeat for each scene(Death, Forest, LivingRoom, Start)
-    (continue below for testing with VR Headset(Meta Quest), turn off XR Device Simulator if on'd the previous time)
-    3. Download Meta Quest Developer Hub and create an account/log into your meta quest account
-    4. In unity, press files -> build settings -> platform android -> build
-    5. Upon finish building, move the apk file to Meta Quest Developer Hub
-    6. On Meta Quest, go to applications and display apps from unknown sources
-    7. Open the game and start playing!
-  
+       - Select the cloned repository folder to open the project in Unity  
+       - Might need to enable the XR Device Simulator Asset on the Hierarchy(left side of screen)  
+         - right click and select toggle active status, name should light up  
+         - repeat the steps for all scenes by going to Projects on the bottom  
+         - select Projects folder, followed by scenes and repeat for each scene(Death, Forest, LivingRoom, Start)  
+    (continue below for testing with VR Headset(Meta Quest), turn off XR Device Simulator if on'd the previous time)  
+    3. Download Meta Quest Developer Hub and create an account/log into your meta quest account  
+    4. In unity, press files -> build settings -> platform android -> build  
+    5. Upon finish building, move the apk file to Meta Quest Developer Hub  
+    6. On Meta Quest, go to applications and display apps from unknown sources  
+    7. Open the game and start playing!  
+    
 ### Controls for VR simulator:
   - run the game by pressing the |> button  
   - all available controls will be displayed on the screen
