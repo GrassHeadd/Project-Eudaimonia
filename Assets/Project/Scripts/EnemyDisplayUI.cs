@@ -26,7 +26,7 @@ public class EnemyDisplayUI : MonoBehaviour
             Debug.Log(Background.color.a);
             yield return new WaitForFixedUpdate();
         }
-            SceneManager.LoadSceneAsync("Start Scene");
+            SceneManager.LoadSceneAsync("WinScene");
     }
 
     public void endGame() {

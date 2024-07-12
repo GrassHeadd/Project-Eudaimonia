@@ -10,9 +10,6 @@ public class SnakeScript : MonoBehaviour
     private Animator animator;
     [SerializeField] private GameObject player; 
     [SerializeField] private GameObject escapeObj;
-    [SerializeField] private float scareDistance = 1.5f;
-    //grabbing stuff for grabbing
-    [SerializeField] private bool isGrabbed = false, isPlayerNear = false;
     //------------------Coords---------------------
     [SerializeField]  private float minCoord = 0f; 
     [SerializeField] private float maxCoord = 100f;
@@ -28,15 +25,6 @@ public class SnakeScript : MonoBehaviour
         animator = GetComponent<Animator>();
         walkTask = StartCoroutine(GoRandomPlace(minCoord, maxCoord, 1));
         
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        // if (!isGrabbed && Vector3.Distance(player.transform.position, transform.position) < scareDistance) {
-        //     // Debug.Log("Player is near");
-        //     if (escapeTask == null) escapeTask = StartCoroutine(RunFromPlayerTask());
-        // }
     }
 
     public IEnumerator GoRandomPlace(float lower, float upper, int speed) {
@@ -74,23 +62,7 @@ public class SnakeScript : MonoBehaviour
         walkTask = StartCoroutine(GoRandomPlace(lower, upper, speed));
     }
 
-    public void StopPathing() {
-        StopCoroutine(walkTask);
-        agent.isStopped = false;
-        isGrabbed = true;
-    }
-
-    public void StartPathingAgain() {
-        isGrabbed = false;
-        //drop it to y=0
-        transform.position.Set(transform.position.x, 0, transform.position.z);
-
-        agent.isStopped = true;
-        agent.ResetPath();
-        walkTask = StartCoroutine(GoRandomPlace(minCoord, maxCoord, 1));
-        
-    }
-
+    //check if player touch the snake
     public void OnTriggerEnter(Collider other) {
         if(other.tag == "Body") {
             playerDie();
