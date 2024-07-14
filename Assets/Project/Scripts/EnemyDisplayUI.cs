@@ -22,11 +22,10 @@ public class EnemyDisplayUI : MonoBehaviour
     public IEnumerator endGameTask() {
         while(Background.color.a < 1) {
             Background.color = new Color(Background.color.r, Background.color.g, Background.color.b, Background.color.a + speedOfTransition/255f);
-            Debug.Log("waiting friend");
-            Debug.Log(Background.color.a);
             yield return new WaitForFixedUpdate();
         }
-            SceneManager.LoadSceneAsync("WinScene");
+        Debug.Log("Win called");
+        SceneManager.LoadSceneAsync("WinScene");
     }
 
     public void endGame() {

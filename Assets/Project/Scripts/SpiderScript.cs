@@ -170,7 +170,7 @@ public class SpiderScript : MonoBehaviour {
     public void spidersLeft() {
         GameObject spiderSpawner = GameObject.FindGameObjectWithTag("Spawner");
         //Debug.Log("Object found: " + spiderSpawner);
-        SpiderSpawner spawner = spiderSpawner.GetComponent<SpiderSpawner>();
+        Spawner spawner = spiderSpawner.GetComponent<Spawner>();
 
         spawner.EnemyCount--;
         enemyDisplayUI.updateCountText(spawner.EnemyCount);

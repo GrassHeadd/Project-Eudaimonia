@@ -28,11 +28,11 @@ public class SnakeScript : MonoBehaviour
     }
 
     public IEnumerator GoRandomPlace(float lower, float upper, int speed) {
-        Debug.Log("Walking normally === ");
+        //Debug.Log("Walking normally === ");
         //generate a random max and min coordinate
         float x = UnityEngine.Random.Range(lower, upper), z = UnityEngine.Random.Range(lower, upper);
 
-        Debug.Log("Now pathed to " + x + " and " + z);
+        //Debug.Log("Now pathed to " + x + " and " + z);
 
         Vector3 newRandomPos = new Vector3(x, transform.position.y, z);
         agent.SetDestination(newRandomPos);
@@ -47,15 +47,15 @@ public class SnakeScript : MonoBehaviour
         // Has snake reached? If not, keep pausing the code here
         while (agent.remainingDistance > 0.1f)
         {
-            Debug.Log("WAITING");
+            //Debug.Log("WAITING");
             yield return new WaitForFixedUpdate();
         }
 
-        Debug.Log("Stopped " + agent.remainingDistance);
+        //Debug.Log("Stopped " + agent.remainingDistance);
         // Snake Reached! Set to Idle and wait random seconds then do another random movement
         animator.SetBool("isRunning", false);
         float randomWaitTime = UnityEngine.Random.Range(minWaitTime, maxWaitTime);
-        Debug.Log("Reached! Now waiting for " + randomWaitTime + " before selecting another destination");
+        //Debug.Log("Reached! Now waiting for " + randomWaitTime + " before selecting another destination");
         yield return new WaitForSeconds(randomWaitTime);
 
         //recurse

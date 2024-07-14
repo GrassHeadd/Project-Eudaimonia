@@ -28,7 +28,6 @@ public class SceneTransitionManager : MonoBehaviour
     {
        while(Background.color.a < 1) {
             Background.color = new Color(Background.color.r, Background.color.g, Background.color.b, Background.color.a + speedOfTransition/255f);
-            Debug.Log("all women do is lie again");
             Debug.Log(Background.color.a);
             yield return new WaitForFixedUpdate();
         }
@@ -39,6 +38,7 @@ public class SceneTransitionManager : MonoBehaviour
 
     public void GoToSceneAsync(int sceneIndex)
     {
+        Debug.Log("go to scene async is called");
         StartCoroutine(GoToSceneAsyncRoutine(sceneIndex));
     }
 
@@ -51,7 +51,6 @@ public class SceneTransitionManager : MonoBehaviour
         float timer = 0;
         while(Background.color.a < 1) {
             Background.color = new Color(Background.color.r, Background.color.g, Background.color.b, Background.color.a + speedOfTransition/255f);
-            Debug.Log("all women do is lie");
             Debug.Log(Background.color.a);
             yield return new WaitForFixedUpdate();
         }
