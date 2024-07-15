@@ -1,8 +1,13 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/Free Island Collection.meta
 guid: a0421f67e4aa4f44bb5760a9a6bb4de6
 folderAsset: yes
+========
+guid: 21395a1af6f566b459cf2f256020dc81
+timeCreated: 1507331512
+licenseType: Store
+>>>>>>>> Test-branch:Assets/Island/Scenes/Scene 1.unity.meta
 DefaultImporter:
-  externalObjects: {}
   userData: 
   assetBundleName: 
   assetBundleVariant: 
