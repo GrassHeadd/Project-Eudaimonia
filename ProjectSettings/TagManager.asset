@@ -13,6 +13,7 @@ TagManager:
   - SpiderDie
   - SpidersLeft
   - Ammo
+  - EnemiesLeft
   layers:
   - Default
   - TransparentFX

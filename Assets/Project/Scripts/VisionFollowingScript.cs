@@ -15,6 +15,7 @@ public class VisionFollower : MonoBehaviour
     {
         // Continuously update the position of the UI element to always be in front of the camera
         Vector3 targetPosition = FindTargetPosition();
+        targetPosition.y += 4;
         MoveTowards(targetPosition);
 
         // Make the UI element face the camera
