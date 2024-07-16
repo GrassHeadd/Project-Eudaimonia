@@ -17,8 +17,17 @@ public class Spawner : MonoBehaviour
     public int EnemyCount;
     public Vector3 pos;
 
+    public int diffLvl;
+
+    //difficulty setting base on level
     private void Start() {
+        diffLvl = GameObject.FindGameObjectWithTag("StaticGameObject").GetComponent<StaticSceneData>().LevelIndicator;
+        Debug.Log("diff level spawner: " + diffLvl);
+        maxEnemy *= diffLvl;
+        
         StartCoroutine(SpawnEnemies());
+
+
     }
 
     private IEnumerator SpawnEnemies() {
