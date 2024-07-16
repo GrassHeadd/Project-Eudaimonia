@@ -17,6 +17,6 @@ public class SnakeGameWinCondition : MonoBehaviour {
     public void playerWin() {
         Debug.Log("playerWin called");
         GameObject.FindGameObjectWithTag("StaticGameObject").GetComponent<StaticSceneData>().LastDeathSceneIndex = SceneManager.GetActiveScene().buildIndex;
-        SceneManager.LoadSceneAsync("Start Scene");
+        SceneManager.LoadSceneAsync("WinScene");
     }
 }

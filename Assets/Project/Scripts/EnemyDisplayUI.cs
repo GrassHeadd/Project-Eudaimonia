@@ -6,7 +6,6 @@ using UnityEngine.SceneManagement;
 
 public class EnemyDisplayUI : MonoBehaviour
 {
-    // Start is called before the first frame update
     [SerializeField] private Image Background;
     [SerializeField] private TMP_Text countText;
     [SerializeField] private int speedOfTransition = 10;

@@ -12,6 +12,7 @@ TagManager:
   - Spider
   - SpiderDie
   - SpidersLeft
+  - Ammo
   layers:
   - Default
   - TransparentFX

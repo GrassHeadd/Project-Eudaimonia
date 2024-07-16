@@ -15,6 +15,9 @@ EditorBuildSettings:
     path: Assets/Project/Scenes/ForestScene.unity
     guid: 3d5b72b915780448f98de0c6ef5dab0f
   - enabled: 1
+    path: Assets/Project/Scenes/BeachScene.unity
+    guid: 96709ec8c8e25430b8ff0cf5d504fab6
+  - enabled: 1
     path: Assets/Project/Scenes/DeathScene.unity
     guid: e59ee2adc58224ed1b449ce0a7b3562e
   - enabled: 1
