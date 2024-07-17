@@ -1206,7 +1206,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7b0a42b6a78544dd9b22daa5c55b3cdf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  time: 100
+  time: 240
   enemyDisplayUI: {fileID: 212333897}
 --- !u!4 &117850402
 Transform:
@@ -10699,7 +10699,7 @@ MonoBehaviour:
   zMax: 5
   zMin: -10
   timeBetwEnemySpawn: 1
-  maxEnemy: 5
+  maxEnemy: 1
   enemyDisplayUI: {fileID: 989150588}
   shouldUpdateUI: 1
   EnemyCount: 0

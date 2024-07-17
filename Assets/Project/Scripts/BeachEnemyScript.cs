@@ -70,7 +70,9 @@ public class BeachEnemyScript : MonoBehaviour
 
     //TODO: Collider
     public void OnTriggerEnter(Collider other) {
+        Debug.Log("triggered collider");
         if(other.tag == "Ammo") {
+            Debug.Log("Ammo triggered");
             animator.SetTrigger("Hit");
             hitCounter--;
             poacherDisplayUI.updateCountText(hitCounter);
@@ -91,5 +93,6 @@ public class BeachEnemyScript : MonoBehaviour
         agent.SetDestination(newPos);
         yield return new WaitForSeconds(2f);
         while (agent.remainingDistance > 0.1f) {yield return new WaitForFixedUpdate();}
+        yield return new WaitForSeconds(10f);
     }
 }

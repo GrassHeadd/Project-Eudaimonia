@@ -21,8 +21,9 @@ public class LevelHandleScript : MonoBehaviour
     public void NextLevel() {
         //int sceneIndex = GameObject.FindGameObjectWithTag("StaticGameObject").GetComponent<StaticSceneData>().LastDeathSceneIndex;
         int levelIndex = GameObject.FindGameObjectWithTag("StaticGameObject").GetComponent<StaticSceneData>().LevelIndicator++; 
-        if(levelIndex < 5) {SceneManager.LoadSceneAsync(1);} 
-        if(levelIndex <= 8 && levelIndex >=5) {SceneManager.LoadSceneAsync(2);} 
-        if(levelIndex > 8) {SceneManager.LoadSceneAsync(3);} 
+        if(levelIndex < 4) {SceneManager.LoadSceneAsync(1);} 
+        if(levelIndex <= 8 && levelIndex >=4) {SceneManager.LoadSceneAsync(2);} 
+        if(levelIndex > 8 && levelIndex < 13) {SceneManager.LoadSceneAsync(3);} 
+        SceneManager.LoadSceneAsync(0);
     }
 }
