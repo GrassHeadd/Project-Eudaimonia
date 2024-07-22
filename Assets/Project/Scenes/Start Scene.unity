@@ -536,8 +536,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 2.12, y: -0.85}
-  m_SizeDelta: {x: 250, y: 120}
+  m_AnchoredPosition: {x: 2.12, y: -0.806}
+  m_SizeDelta: {x: 250, y: 220}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &126943342
 MonoBehaviour:
@@ -611,8 +611,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 2.53, y: -0.9}
-  m_SizeDelta: {x: 350, y: 150}
+  m_AnchoredPosition: {x: 2.53, y: -0.68}
+  m_SizeDelta: {x: 350, y: 250}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &137227366
 MonoBehaviour:
@@ -1349,8 +1349,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 2.12, y: -0.85}
-  m_SizeDelta: {x: 250, y: 150}
+  m_AnchoredPosition: {x: 2.12, y: -1.132}
+  m_SizeDelta: {x: 250, y: 250}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &272193257
 MonoBehaviour:
@@ -2595,7 +2595,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 633.3738, y: 1126.5836}
+  m_AnchoredPosition: {x: 633.3738, y: 1408}
   m_SizeDelta: {x: 754, y: 401}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &530888430
@@ -3128,7 +3128,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 2.52, y: -0.44}
+  m_AnchoredPosition: {x: 2.52, y: 0.141}
   m_SizeDelta: {x: 300, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &605717708
@@ -3151,16 +3151,19 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "You got a text message from your grandma(she\u2019s trendy) to ask you
-    to now proceed to a nearby beach for the next challenge. However, you trusted
-    your GPS too much which navigated you to a forest instead. As you realise you
-    are not able to make it out of the forest anytime soon, you decide to take this
-    opportunity and get comfortable with the forest to prove to your grandma that
-    you are a brave soul. Luckily for you, you brought a tent with you to sleep over
-    during the night. However, to survive the night, you have to do some tasks before
-    the sun sets that require you to venture into the forest which conveniently has
-    a large amount of snakes that you are afraid of. You will need to avoid the snakes
-    and do the tasks while learning about their behaviour.\r\n"
+  m_text: "INSTRUCTIONS\n\nYou got a text message from your grandma(she\u2019s trendy)
+    to ask you to now proceed to a nearby beach for the next challenge. However,
+    you trusted your GPS too much which navigated you to a forest instead. As you
+    realise you are not able to make it out of the forest anytime soon, you decide
+    to take this opportunity and get comfortable with the forest to prove to your
+    grandma that you are a brave soul. Luckily for you, you brought a tent with you
+    to sleep over during the night. However, to survive the night, you have to do
+    some tasks before the sun sets that require you to venture into the forest which
+    conveniently has a large amount of snakes that you are afraid of. You will need
+    to avoid the snakes and reach back to you're tent safely.\r\n\nMove around or
+    control your left hand controller to navigate around the snakes to avoid them
+    and find your way back to the tent at the other side of the forest!\n(game area
+    is on the flat ground so avoid elevated surfaces)"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -5803,7 +5806,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 2.08, y: -0.469}
+  m_AnchoredPosition: {x: 2.08, y: -0.34}
   m_SizeDelta: {x: 210, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1034682001
@@ -5826,13 +5829,15 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "The first challenge she gave you sets place in your childhood house that
-    hasn\u2019t had inhabitants for years and is heavily infested by a specific insect
-    that you fear, spiders. You are tasked to clean the house despite your fear.
-    Catch is, you have to clear out the spiders without harming them as they are
-    a vital part of the ecosystem. By doing so, you learn many important things including
-    the fact that they are mostly harmless and are more afraid of you than you are
-    afraid of them."
+  m_text: "INSTRUCTIONS\n\nThe first challenge she gave you sets place in your childhood
+    house that hasn\u2019t had inhabitants for years and is heavily infested by a
+    specific insect that you fear, spiders. You are tasked to clean the house despite
+    your fear. Catch is, you have to clear out the spiders without harming them as
+    they are a vital part of the ecosystem. By doing so, you learn many important
+    things including the fact that they are mostly harmless and are more afraid of
+    you than you are afraid of them.\n\nGrab the spiders with your grab button locate
+    at the side of your handgrip,\nBefore the time runs out, throw all the spiders
+    out of the door to win the game!"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -9103,7 +9108,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 2.144, y: -0.631}
+  m_AnchoredPosition: {x: 2.144, y: -0.079}
   m_SizeDelta: {x: 210, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1660545247
@@ -9126,13 +9131,14 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'After you exit the forest, you reach the beach. You snooped around and
-    realised there are poachers around that are hunting the sharks, after warning
-    them that you have informed the authorities, they hurried off. However, one extra
-    persistent guy remained. You now have to use rocks or a bat that you found around
-    you to fend him off.
-
-    (Boss fight wohoooooooo)'
+  m_text: "INSTRUCTIONS\n\nAfter you exit the forest, you reach the beach. You snooped
+    around and realised there are poachers around that are hunting the sharks, after
+    warning them that you have informed the authorities, they hurried off. However,
+    one extra persistent guy remained. You now have to use rocks or a bat that you
+    found around you to fend him off.\n(Boss fight wohoooooooo)\n\nUse grab button
+    to grab stones to throw at remy(the enemy running around), avoid hitting the
+    shark and clear his health bar! \nFor simulator, you can grab the bat to whack
+    remy!"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
