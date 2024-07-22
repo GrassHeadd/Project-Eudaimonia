@@ -13,7 +13,7 @@ public class BeachEnemyScript : MonoBehaviour
 
     //--------------------Coords--------------------//
     [SerializeField]  private float minX = 1200f; 
-    [SerializeField] private float maxX = 1224f;
+    [SerializeField] private float maxX = 1215f;
     [SerializeField]  private float minZ = 1790f; 
     [SerializeField] private float maxZ = 1800f;
 

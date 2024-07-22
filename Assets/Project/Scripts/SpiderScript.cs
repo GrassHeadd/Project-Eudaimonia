@@ -48,7 +48,7 @@ public class SpiderScript : MonoBehaviour {
     /// </summary>
     public IEnumerator GoRandomPlace(float lower, float upper, int speed)
     {
-        Debug.Log("Walking normally === ");
+        //Debug.Log("Walking normally === ");
         //generate a random max and min coordinate
         float x = UnityEngine.Random.Range(lower, upper), z = UnityEngine.Random.Range(lower, upper);
 
