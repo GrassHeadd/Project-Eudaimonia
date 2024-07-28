@@ -11,6 +11,9 @@ TagManager:
   - Body
   - Spider
   - SpiderDie
+  - SpidersLeft
+  - Ammo
+  - EnemiesLeft
   layers:
   - Default
   - TransparentFX

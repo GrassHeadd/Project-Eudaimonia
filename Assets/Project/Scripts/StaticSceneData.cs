@@ -6,6 +6,7 @@ public class StaticSceneData : MonoBehaviour
 {
     public int LastDeathSceneIndex = -1;
     private static StaticSceneData instance;
+    public int LevelIndicator= -1;
  
     void Awake() {
         if(instance == null) {
@@ -16,5 +17,9 @@ public class StaticSceneData : MonoBehaviour
             Destroy(gameObject);
         }
         
+    }
+    
+    public void setLevelIndicator(int newLevel) {
+        LevelIndicator = newLevel;
     }
 }

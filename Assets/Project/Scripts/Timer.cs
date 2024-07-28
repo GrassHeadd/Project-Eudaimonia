@@ -1,7 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.AI;
+using UnityEngine.SceneManagement;
 public class Timer : MonoBehaviour
 {
     [SerializeField] float time = 200f;
@@ -19,6 +20,7 @@ public class Timer : MonoBehaviour
         time--;
         enemyDisplayUI.updateTimeText(time);
        }
-       snakeScript.playerDie();
+        GameObject.FindGameObjectWithTag("StaticGameObject").GetComponent<StaticSceneData>().LastDeathSceneIndex = SceneManager.GetActiveScene().buildIndex;
+        SceneManager.LoadSceneAsync("DeathScene");
     }
 }

@@ -6,7 +6,6 @@ using UnityEngine.SceneManagement;
 
 public class EnemyDisplayUI : MonoBehaviour
 {
-    // Start is called before the first frame update
     [SerializeField] private Image Background;
     [SerializeField] private TMP_Text countText;
     [SerializeField] private int speedOfTransition = 10;
@@ -22,11 +21,10 @@ public class EnemyDisplayUI : MonoBehaviour
     public IEnumerator endGameTask() {
         while(Background.color.a < 1) {
             Background.color = new Color(Background.color.r, Background.color.g, Background.color.b, Background.color.a + speedOfTransition/255f);
-            Debug.Log("waiting friend");
-            Debug.Log(Background.color.a);
             yield return new WaitForFixedUpdate();
         }
-            SceneManager.LoadSceneAsync("Start Scene");
+        Debug.Log("Win called");
+        SceneManager.LoadSceneAsync("WinScene");
     }
 
     public void endGame() {

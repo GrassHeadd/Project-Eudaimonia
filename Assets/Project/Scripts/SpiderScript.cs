@@ -3,27 +3,21 @@ using UnityEngine;
 using UnityEngine.AI;
 
 public class SpiderScript : MonoBehaviour {
-    // Setting up stuff, agent to tell the AI what to do, animator to bind the animator to the spider
     private NavMeshAgent agent;
     private Animator animator;
 
-    //player to indicate the player
-    [SerializeField] private GameObject player; /*SerializeField makes it show up on unity under the inspector so we can edit it directly there*/
-    //scare objects for logic for spider to run away when you get close to it
+    [SerializeField] private GameObject player;
     [SerializeField] private GameObject escapeObj;
     [SerializeField] private float scareDistance = 1.5f;
     //grabbing stuff for grabbing
     [SerializeField] private bool isGrabbed = false, isPlayerNear = false;
 
-    //coordinates and time for spider travelling
+    //-------------------coords-------------------//
     [SerializeField]  private float minCoord = -4.5f; 
     [SerializeField] private float maxCoord = 4.5f;
     [SerializeField] private float minWaitTime = 3f;
     [SerializeField] private float maxWaitTime = 7f;
     [SerializeField] private EnemyDisplayUI enemyDisplayUI;
-
-
-    //a runnable (cs2030s wow), to change if spider is running away from you or just roaming
     private Coroutine walkTask = null, escapeTask;
 
     void Start()
@@ -31,7 +25,8 @@ public class SpiderScript : MonoBehaviour {
         //initialising to assign the components from unity inspector
         agent = GetComponent<NavMeshAgent>();
         animator = GetComponent<Animator>();
-
+        player = GameObject.FindGameObjectWithTag("MainCamera");
+        enemyDisplayUI = GameObject.FindGameObjectWithTag("SpidersLeft").GetComponent<EnemyDisplayUI>();
         //starting the walking inside the coordinates at an animation walking speed of 1
         walkTask = StartCoroutine(GoRandomPlace(minCoord, maxCoord, 1));
     }
@@ -53,7 +48,7 @@ public class SpiderScript : MonoBehaviour {
     /// </summary>
     public IEnumerator GoRandomPlace(float lower, float upper, int speed)
     {
-        Debug.Log("Walking normally === ");
+        //Debug.Log("Walking normally === ");
         //generate a random max and min coordinate
         float x = UnityEngine.Random.Range(lower, upper), z = UnityEngine.Random.Range(lower, upper);
 
@@ -64,7 +59,8 @@ public class SpiderScript : MonoBehaviour {
         //set the destination of travel to the new position
         agent.SetDestination(newRandomPos);
         //teleporting the marker to where the spider is moving towards(just to see where the spider is going for debugging)
-        escapeObj.transform.position = newRandomPos;
+        
+        if (escapeObj != null) escapeObj.transform.position = newRandomPos;
 
         //set the animation move speed
         animator.SetBool("isRunning", true);
@@ -108,7 +104,7 @@ public class SpiderScript : MonoBehaviour {
         NavMeshHit hit;
         NavMesh.SamplePosition(randomPointInSphere, out hit, escapeRange, 1);
         Vector3 finalPosition = hit.position;
-        escapeObj.transform.position = finalPosition;
+        if (escapeObj != null) escapeObj.transform.position = finalPosition;
         //set the destination
         agent.SetDestination(finalPosition);
         
@@ -154,23 +150,10 @@ public class SpiderScript : MonoBehaviour {
         
     }
 
-    //disables the spider after getting thrown out of the house
-    // public void Delete() {
-    //    // Debug.Log(gameObject.transform.position);
-
-    //     if(gameObject.transform.position.y < 0) {
-    //         //Debug.Log("this gets called");
-    //         spidersLeft();
-    //         gameObject.SetActive(false);
-    //     }
-    // }
-
-
-
     public void spidersLeft() {
         GameObject spiderSpawner = GameObject.FindGameObjectWithTag("Spawner");
         //Debug.Log("Object found: " + spiderSpawner);
-        SpiderSpawner spawner = spiderSpawner.GetComponent<SpiderSpawner>();
+        Spawner spawner = spiderSpawner.GetComponent<Spawner>();
 
         spawner.EnemyCount--;
         enemyDisplayUI.updateCountText(spawner.EnemyCount);
