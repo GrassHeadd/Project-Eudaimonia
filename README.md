@@ -39,8 +39,11 @@ Feature 6 (equipment): Integrate the use of interactive equipment and resources 
     6. On Meta Quest, go to applications and display apps from unknown sources  
     7. Open the game and start playing!  
     
-### Controls for VR simulator:
-  - run the game by pressing the |> button  
+### Controls for VR simulator(only works for windows unfortunately):
+  - check the hirerachy tab in unity to see if XR Device Simulator is lit up and enabled, if not, right click it and press toggle active status to enable it  
+  - repeat the process for all the scenes by going to the projects tab at the bottom, navigate to the project folder, then scenes folder, and repeat the process for all the scenes(those that are not folders)
+  - go to start scene by double clicking the start scene object
+  - run the game by pressing the |> button at the middle top of your screen
   - all available controls will be displayed on the screen
 
 ### Controls for VR Headset:
