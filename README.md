@@ -9,17 +9,22 @@ Create a simulation of scenarios where users can interact with their biophobias 
 Welcome to the Project Eudaemonia! This project creates an immersive environment where players can interact with animals in various ways within a detailed setting. This README provides an overview of the features, setup instructions, and other essential information.
 
 ## FEATURES
-Features 1 (core): Interactive mechanisms for the insects that enables players to interact with a variety of insects through intuitive VR controls, insects will have realistic behaviours such as responding to environmental stimuli
+Features 1 (core): Interactive mechanisms including movement, grabbing, swinging and throwing, enabling players to interact with a variety of animals through intuitive VR controls  
 
-Feature 2 (core): Dynamic environment to represent scenarios where the user will interact with the insects by doing tasks in a location that simulates realistic environmental conditions 
+Feature 2 (core): Dynamic environment to represent scenarios where the user will interact with the insects by doing tasks in a location that simulates realistic environmental conditions  
 
-Feature 3 (core): Users able to choose from different animals catering to what their biophobia is, and customise the level they can accept
+Feature 3 (core): Multiple different levels with different animals for the users to choose from catering to what their biophobia is, and customise the level they can accept  
 
-Feature 4 (extension): Integrate information that teaches players about insect biology and behaviour to let users familiarise with the insects subconsciously, removing the fear factor
+Feature 4 (core): Boss fights to make the game more interesting and fun, bringing a competitive factor on top of overcoming their phobia  
 
-Feature 5 (music): Integrate music and environmental sound to the game to make it more realistic
+Feature 5 (extension): Subconsciously integrate information that teaches players about animal biology and behaviour to let users familiarise with the insects subconsciously, removing the fear factor(e.g if you don’t step on snakes they won’t bother you)  
 
-Feature 6 (equipment): Integrate the use of interactive equipment and resources for the user to make use of in the game to interact with the objects, contributing to the interactiveness and realistic factor of exploring the scenes
+Feature 6 (extension): Integrate music to the game to make it more realistic  
+
+Feature 7 (extension): Integrate the use of interactive equipment and resources for the user to make use of in the game to interact with the objects, contributing to the interactiveness and realistic factor of exploring the scenes  
+
+Feature 8 (extension): Sounds integrated to provide a more realistic and enjoyable experience for the user   
+
 
 ### Installation:
   To get started with the Spider Interaction Unity Project, follow these steps:  
