@@ -26,8 +26,6 @@ public class Spawner : MonoBehaviour
         maxEnemy *= diffLvl;
         
         StartCoroutine(SpawnEnemies());
-
-
     }
 
     private IEnumerator SpawnEnemies() {
