@@ -11165,7 +11165,7 @@ MonoBehaviour:
   zMax: 5
   zMin: -10
   timeBetwEnemySpawn: 1
-  maxEnemy: 1
+  maxEnemy: 4
   enemyDisplayUI: {fileID: 989150588}
   shouldUpdateUI: 1
   EnemyCount: 0
