@@ -27,7 +27,7 @@ Feature 8 (extension): Sounds integrated to provide a more realistic and enjoyab
 
 
 ### Installation:
-  To get started with the Spider Interaction Unity Project, follow these steps:  
+  To get started with the SProject, follow these steps:  
     1. Clone the repository: https://github.com/GrassHeadd/Project-Eudaimonia.git  
     2. Open in Unity  
        - Launch Unity Hub  
